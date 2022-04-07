@@ -13,7 +13,7 @@ const Contact = () => {
       const validationSchema = Yup.object().shape({
         name: Yup.string().required("Name is required"),
         email: Yup.string().email("Email is invalid").required("Email is required"),
-        phone: Yup.string().min(10,"enter 10 num").matches(/^[0-9]*$/,"Only allow numbers").required("Password is required"),
+        phone: Yup.string().min(10,"Enter 10 digit number minimum").matches(/^[0-9]*$/,"Only allow numbers").required("Phone no. is required"),
         services: Yup.string().required("Select services"),
         message: Yup.string().required("Message is required"),
       });
